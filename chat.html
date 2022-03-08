@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Chat App</title>
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js" integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="client.js" defer></script>
+</head>
+
+<body>
+    <div class="container" style="height: 500px;max-height: 500px;overflow-y: auto;">
+        <div id="chatDisplay"></div>
+    </div>
+    <div class="container bottom-panel">
+        <!-- CONNECT AND DISCONNECT BUTTONS-->
+        <div class="inline">
+            <button id='connectBtn'>Connect</button>
+            <button id='disconnectBtn'>Disconnect</button>
+        </div>
+
+        <!-- NUMBER OF CLIENTS CONNECTED -->
+        <p>Number of people in the chat: <span id="numConnection"></span></p>
+        <p>Current Server Time: <span id="time-display"></span></p>
+        <p class="pField">Your Name: <br><input type="text" id="name" /></p>
+        <p class="pField">Your Message: <input type="text" id="message" style="width: 100%" /></p>
+        <div class="inline">
+            <button id='sendButton'>Send Message</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
